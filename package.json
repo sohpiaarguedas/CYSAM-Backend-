@@ -1,0 +1,52 @@
+{
+  "name": "cysam-backend-",
+  "version": "1.0.0",
+  "description": "Proyecto del curso de desarrollo de aplicaciones interactivas ll.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --exec ts-node server.ts",
+    "dev:watch": "nodemon --watch src --exec ts-node server.ts",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "ts-node src/db/seed.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohpiaarguedas/CYSAM-Backend-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sohpiaarguedas/CYSAM-Backend-/issues"
+  },
+  "homepage": "https://github.com/sohpiaarguedas/CYSAM-Backend-#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "drizzle-zod": "^0.8.3",
+    "express": "^5.2.1",
+    "helmet": "^8.2.0",
+    "morgan": "^1.11.0",
+    "pg": "^8.21.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.9.3",
+    "@types/pg": "^8.20.0",
+    "custom-env": "^2.0.6",
+    "drizzle-kit": "^0.31.10",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
+  }
+}
