@@ -1,5 +1,8 @@
 import app from './src/app';
 import env from './env';
+import authRoutes from './src/routes/authRoutes';
+
+app.use('/api/authRoutes', authRoutes);
 
 
 app.use('/api', (req, res) =>{
@@ -10,3 +13,4 @@ app.use('/api', (req, res) =>{
 app.listen(env.PORT, () => {
     console.log(`Server running on port ${env.PORT}`);
 });
+
