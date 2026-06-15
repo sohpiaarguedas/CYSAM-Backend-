@@ -2,17 +2,12 @@ import { defineConfig } from "drizzle-kit";
 import env from "./env";
 
 export default defineConfig({
-    //db connection
+
+    schema: "./src/db/schema.ts",
+    out: "./drizzle",
     dialect: "postgresql",
     dbCredentials: {
-        url: env.DATABASE_URL
+        url: env.DATABASE_URL,
     },
-    //schema
-    schema: "./src/db/schema.ts",
-    //migrations
-    out: "./migrations",
-    //sql verbose logging
-    verbose: true,
-    //strict mode
-    strict: true
+
 });

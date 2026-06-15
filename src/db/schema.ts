@@ -7,12 +7,20 @@ export const articles = pgTable('articles', {
     media_url: text('media_url').notNull(),
     media_type: text('media_type').notNull(),
     link_url: text('link_url').notNull(),
-    link_preview:text('link_preview').notNull(),
-    link_Image_Preview:text('linkImagePreview').notNull(),
+    link_preview: text('link_preview').notNull(),
+    link_Image_Preview: text('linkImagePreview').notNull(),
     button_text: text('button_text').notNull(),
     created_at: timestamp('created_at').defaultNow().notNull(),
     updated_at: timestamp('updated_at').defaultNow().notNull()
+})
 
- 
-    
+export const users = pgTable('users', {
+    id: uuid('id').primaryKey().defaultRandom(),
+    name: text('name').notNull(),
+    email: text('email').notNull().unique(),
+    password: text('password').notNull(),
+
+    created_at: timestamp('created_at').defaultNow().notNull(),
+    updated_at: timestamp('updated_at').defaultNow().notNull()
+
 });
