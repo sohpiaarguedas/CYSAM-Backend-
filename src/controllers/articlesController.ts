@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import {db} from '../db/conection';
+import db from "../db/conection";
 import {articles} from '../db/schema';
 import { eq } from "drizzle-orm";
 
@@ -29,3 +29,37 @@ export const getArticleById = async (req: Request, res: Response) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }
+
+
+export const createArticle = async (req: Request, res: Response) => {
+    try {
+        const {
+            title,
+            summary,
+            media_url,
+            media_type,
+            link_url,
+            link_preview,
+            link_Image_Preview,
+            button_text
+        } = req.body;
+
+        const [article] = await db.insert(articles).values({
+                title,
+                summary,
+                media_url,
+                media_type,
+                link_url,
+                link_preview,
+                link_Image_Preview,
+                button_text
+            })
+            .returning();
+
+        res.status(201).json(article);
+
+    } catch (error) {
+        console.error('Error creating article:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+};

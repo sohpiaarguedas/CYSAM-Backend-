@@ -2,17 +2,34 @@ import { Router } from 'express';
 import { z } from 'zod';
 import db from '../db/conection';
 import { articles } from '../db/schema';
-import { validateParams } from '../middleware/validations';
-import { getArticleById, getArticles } from '../controllers/articlesController';
+import { validateBody, validateParams } from '../middleware/validations';
+import { getArticleById, getArticles, createArticle } from '../controllers/articlesController';
 
 const getArticleSchema = z.object({
     id: z.string()
 });
+
+const getCreateArticle = z.object({
+ 
+    title: z.string(),
+    summary: z.string(),
+    media_url: z.string(),
+    media_type: z.string(),
+    link_url: z.string(),
+    link_preview: z.string(),
+    link_Image_Preview: z.string(),
+    button_text: z.string()
+
+})
 
 const router = Router();
 
 router.get('/', getArticles);
 
 router.get('/:id', validateParams(getArticleSchema), getArticleById);
+
+router.post('/create', validateBody(getCreateArticle), createArticle)
+
+
 
 export default router;
