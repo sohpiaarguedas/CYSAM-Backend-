@@ -6,7 +6,6 @@ export const articles = pgTable('articles', {
     summary: text('summary').notNull(),
     media_url: text('media_url').notNull(),
     media_type: text('media_type').notNull(),
-    link_url: text('link_url').notNull(),
     link_preview: text('link_preview').notNull(),
     link_Image_Preview: text('linkImagePreview').notNull(),
     button_text: text('button_text').notNull(),

@@ -15,10 +15,10 @@ const getCreateArticle = z.object({
     summary: z.string(),
     media_url: z.string(),
     media_type: z.string(),
-    link_url: z.string(),
     link_preview: z.string(),
-    link_Image_Preview: z.string(),
+    link_Image_Preview:z.string(),
     button_text: z.string()
+
 
 })
 
