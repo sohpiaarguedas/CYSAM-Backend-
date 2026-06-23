@@ -7,7 +7,6 @@ import articlesRoutes from "./src/routes/articlesRoutes";
 import aiRoutes from './src/routes/aiRoutes';
 
 app.use('/api/authRoutes', authRoutes);
-
 app.use('/api/articles', articlesRoutes);
 app.use('/api/ai', aiRoutes);
 
@@ -18,4 +17,3 @@ app.use('/api', (req, res) => {
 app.listen(env.PORT, () => {
     console.log(`Server running on port ${env.PORT}`);
 });
-
