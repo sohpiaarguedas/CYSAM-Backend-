@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Phishing: El arte de engañar en la red",
+    "summary": "Conoce cómo los ciberdelincuentes suplantan identidades para robar datos bancarios y cómo detectarlos.",
+    "mediaUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "mediaType": "youtube",
+    "linkUrl": "/articulos/que-es-phishing",
+    "linkPreview": "video.mp4",
+    "linkImagePreview": "https://i.pinimg.com/736x/7c/ea/39/7cea3910623cf39ae839ae86fe702625.jpg",
+    "buttonText": "APRENDER",
+    "content": "El phishing sigue siendo una de las amenazas más efectivas en la actualidad. Los atacantes utilizan correos electrónicos falsos, mensajes de texto (smishing) o llamadas telefónicas para manipular a las víctimas. En este artículo analizamos las señales de alerta más comunes: enlaces sospechosos, faltas de ortografía en correos institucionales y la urgencia psicológica que imponen para que actúes sin pensar."
+  },
+  {
+    "id": 2,
+    "title": "Contraseñas Seguras y Robustas",
+    "summary": "Aprende a crear llaves digitales que protejan tus cuentas de los ataques de fuerza bruta más comunes.",
+    "mediaUrl": "https://i.pinimg.com/736x/7c/ea/39/7cea3910623cf39ae839ae86fe702625.jpg",
+    "mediaType": "image",
+    "linkUrl": "/articulos/guia-contrasenas",
+    "linkPreview": "video.mp4",
+    "linkImagePreview": "https://i.pinimg.com/736x/7c/ea/39/7cea3910623cf39ae839ae86fe702625.jpg",
+    "buttonText": "LEER MÁS",
+    "content": "Utilizar '123456' o el nombre de tu mascota ya no es una opción viable. Los sistemas modernos de ataque pueden adivinar contraseñas simples en cuestión de segundos. Una contraseña robusta debe incluir una combinación de mayúsculas, minúsculas, números y caracteres especiales, alcanzando idealmente una longitud mínima de 12 a 14 caracteres. Recomendamos además el uso de gestores de contraseñas."
+  },
+  {
+    "id": 3,
+    "title": "Ingeniería Social en Redes Sociales",
+    "summary": "Los peligros detrás de los cuestionarios inocentes y perfiles falsos que buscan recopilar tu información personal.",
+    "mediaUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "mediaType": "youtube",
+    "linkUrl": "/articulos/ingeneria-social",
+    "linkPreview": "video.mp4",
+    "linkImagePreview": "https://i.pinimg.com/736x/7c/ea/39/7cea3910623cf39ae839ae86fe702625.jpg",
+    "buttonText": "VER DETALLES",
+    "content": "La ingeniería social no ataca a las máquinas, ataca al usuario. A través de perfiles falsos o dinámicas de juegos interactivos en redes sociales, los atacantes logran que reveles el nombre de tu primera escuela, tu fecha de nacimiento o el nombre de tu madre, datos que suelen ser las respuestas a las preguntas de seguridad de tus cuentas bancarias."
+  },
+  {
+    "id": 4,
+    "title": "Autenticación de Dos Factores (2FA)",
+    "summary": "Tu segunda línea de defensa. Por qué es vital activarlo en todas tus plataformas y aplicaciones digitales.",
+    "mediaUrl": "https://i.pinimg.com/736x/87/df/cc/87dfcc88ab49f8d4aa45b76adc8c271e.jpg",
+    "mediaType": "image",
+    "linkUrl": "/articulos/que-es-2fa",
+    "linkPreview": "video.mp4",
+    "linkImagePreview": "https://i.pinimg.com/736x/87/df/cc/87dfcc88ab49f8d4aa45b76adc8c271e.jpg",
+    "buttonText": "PROTEGER",
+    "content": "Incluso si un atacante logra robar tu contraseña, la Autenticación de Dos Factores (2FA) impide que acceda a tu cuenta. Esto se debe a que el sistema solicitará un segundo código único y temporal generado directamente en tu teléfono móvil o enviado mediante una app de autenticación como Google Authenticator. Activarlo reduce drásticamente la probabilidad de hackeos existosos."
+  },
+  {
+    "id": 5,
+    "title": "Estafas comunes en compras online",
+    "summary": "Aprende a identificar tiendas falsas, ofertas sospechosas y métodos de pago inseguros en la web.",
+    "mediaUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "mediaType": "youtube",
+    "linkUrl": "/articulos/estafas-compras",
+    "linkPreview": "video.mp4",
+    "linkImagePreview": "https://i.pinimg.com/736x/7c/ea/39/7cea3910623cf39ae839ae86fe702625.jpg",
+    "buttonText": "EVITAR ESTAFAS",
+    "content": "El comercio electrónico ha crecido exponencialmente, y con él, las tiendas fantasma. Estas páginas ofrecen productos de alta gama a precios ridículamente bajos para atraer víctimas. Antes de comprar, verifica siempre que la URL empiece con HTTPS, revisa las reseñas en sitios externos y desconfía si el único método de pago disponible es mediante transferencia bancaria directa o giros internacionales."
+  }
+]
