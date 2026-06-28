@@ -1,19 +1,16 @@
 import {drizzle} from "drizzle-orm/node-postgres";
-import {Pool} from "pg";
+import { Pool } from "pg";
 import * as schema from "./schema";
 import env from "../../env";
 
-const createPool = ()=>{
+const createPool = () => {
     return new Pool({
-        connectionString: env.DATABASE_URL,
-        connectionTimeoutMillis: 10000,
-        max: 1,
-        ssl: {
-            rejectUnauthorized: false
-        }
-        
+        connectionString:env.DATABASE_URL,
+        connectionTimeoutMillis:10000,
+        max:1
     });
-}
+}//createPool
 
-export const db = drizzle(createPool(), { schema });
+const db = drizzle(createPool(),{schema});
+
 export default db;
