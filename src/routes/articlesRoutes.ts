@@ -4,6 +4,8 @@ import db from '../db/conection';
 import { articles } from '../db/schema';
 import { validateBody, validateParams } from '../middleware/validations';
 import { getArticleById, getArticles, createArticle } from '../controllers/articlesController';
+import { authenticateToken } from '../middleware/auth';
+import { authorizeRole } from '../middleware/authorizeRole';
 
 const getArticleSchema = z.object({
     id: z.string()
@@ -28,7 +30,7 @@ router.get('/', getArticles);
 
 router.get('/:id', validateParams(getArticleSchema), getArticleById);
 
-router.post('/create', validateBody(getCreateArticle), createArticle)
+router.post('/create', authenticateToken, authorizeRole(["admin"]), validateBody(getCreateArticle), createArticle)
 
 
 

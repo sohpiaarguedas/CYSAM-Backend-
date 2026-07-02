@@ -45,6 +45,7 @@ export const createArticle = async (req: Request, res: Response) => {
             summary,
             media_url,
             media_type,
+            link_url,
             link_preview,
             link_Image_Preview,
             button_text
@@ -55,6 +56,7 @@ export const createArticle = async (req: Request, res: Response) => {
                 summary,
                 media_url,
                 media_type,
+                link_url,
                 link_preview,
                 link_Image_Preview,
                 button_text
