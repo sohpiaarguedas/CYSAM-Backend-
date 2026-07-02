@@ -2,6 +2,7 @@ import type { Request, Response } from "express";
 import db from "../db/conection";
 import { users } from "../db/schema";
 import { eq } from "drizzle-orm";
+import { generateToken } from "../utils/jwt";
 
 import {hashPassword, comparePasswords} from "../utils/passwords";
 
@@ -19,12 +20,21 @@ export const register = async (req: Request, res: Response) => {
             id: users.id,
             name: users.name,
             email: users.email,
+            role: users.role,
+        });
+
+        const token = await generateToken({
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: "user",
         });
 
         return res.status(201).json({
             ok: true,
             message: "Usuario registrado correctamente",
             data: user,
+            token,
         });
 
     } catch (error) {
@@ -61,6 +71,13 @@ export const login = async (req: Request, res: Response) => {
             });
         }
 
+        const token = await generateToken({
+            id:user.id,
+            name:user.name,
+            email:user.email,
+            role:user.role
+        });
+
         return res.status(200).json({
             ok: true,
             message: "Inicio de sesión exitoso",
@@ -68,7 +85,9 @@ export const login = async (req: Request, res: Response) => {
                 id: user.id,
                 name: user.name,
                 email: user.email,
+                role:user.role,
             },
+            token,
         });
 
     } catch (error) {
