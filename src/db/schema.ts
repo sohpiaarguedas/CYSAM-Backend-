@@ -21,7 +21,7 @@ export const articles = pgTable('articles', {
     link_url: text('link_url').default(""),
     link_preview: text('link_preview').default(""),
     link_Image_Preview: text('linkImagePreview').default(""),
-    button_text: text('button_text').default(""),
+ 
     //////////////////////////////////////////////////////////
 
     created_at: timestamp('created_at').defaultNow().notNull(),

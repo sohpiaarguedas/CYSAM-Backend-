@@ -48,7 +48,7 @@ export const createArticle = async (req: Request, res: Response) => {
             link_url,
             link_preview,
             link_Image_Preview,
-            button_text
+          
         } = req.body;
 
         const [article] = await db.insert(articles).values({
@@ -59,7 +59,7 @@ export const createArticle = async (req: Request, res: Response) => {
                 link_url,
                 link_preview,
                 link_Image_Preview,
-                button_text
+               
             })
             .returning();
 
