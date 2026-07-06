@@ -12,14 +12,12 @@ const getArticleSchema = z.object({
 });
 
 const getCreateArticle = z.object({
- 
     title: z.string(),
     summary: z.string(),
     media_url: z.string(),
     media_type: z.string(),
     link_preview: z.string(),
     link_Image_Preview:z.string(),
-    button_text: z.string()
 
 
 })
