@@ -3,7 +3,7 @@ import { z } from 'zod';
 import db from '../db/conection';
 import { articles } from '../db/schema';
 import { validateBody, validateParams } from '../middleware/validations';
-import { getArticleById, getArticles, createArticle } from '../controllers/articlesController';
+import { getArticleById, getArticles, createArticle, deleteArticle } from '../controllers/articlesController';
 import { authenticateToken } from '../middleware/auth';
 import { authorizeRole } from '../middleware/authorizeRole';
 
@@ -31,6 +31,8 @@ router.get('/', getArticles);
 router.get('/:id', validateParams(getArticleSchema), getArticleById);
 
 router.post('/create', authenticateToken, authorizeRole(["admin"]), validateBody(getCreateArticle), createArticle)
+
+router.delete("/:id", authenticateToken, authorizeRole(["admin"]), validateParams(getArticleSchema), deleteArticle)
 
 
 
